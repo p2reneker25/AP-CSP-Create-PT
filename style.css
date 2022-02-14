@@ -1,0 +1,14 @@
+body{
+  background-image: url(images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inner {
+  position: absolute;
+}
+.container{
+  display: grid;
+  place-items: center;
+  grid-template-areas:
+                  "inner-div";
+}

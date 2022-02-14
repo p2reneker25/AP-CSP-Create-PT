@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--Jquery library used for fetching apis--> 
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -10,17 +12,35 @@
   </head>
   <body>
     <center>
-    <h1> Climate Change Calculator </h1>
-   <p>Click the button to get your coordinates.</p>
-
-<button onclick="getLocation()">Get Location</button>
-<br>
-<input type="text" id="latBox">
-<br>
-<input type="text" id="lngBox">
-
-<p id="demo"></p>
-    <script src="scripts/script.js"></script>
-
+    <h1> Sea Level Rise Calculator </h1>
+    <select id="locationMode" onchange="chooseLocationSystem()">
+          <option>Choose method of getting location</option>
+          <option>Use browser location</option>
+          <option>Use coordinates</option>
+          <option>Use address</option>
+    </select>
+    <br>
+    <div class = "container">
+    <div id="geocode" style="visibility: hidden">
+       <p>Click the button to get your coordinates.</p>
+      <button onclick="getLocation()">Get Location</button>
+      </div>
+    <div class = "inner" id="coordinates"style="visibility: hidden">
+      <p>Input lat/long coordinates</p>
+    </div>
+    <div id="inputA" style="visibility: hidden">
+      <input type="text" id="latBox">
+      <br>
+      <input type="text" id="lngBox">
+    </div>
+    <div  class = "inner"id="inputB" style="visibility: hidden">
+      <p> Input address</p>
+      <input type="text" id="addBox">
+    </div>
+    </div>
+    <br>
+    <button id="submitInfo" onclick="submitLocation()">Submit</button>
   </body>
+    
+    <script src="scripts/script.js"></script>
 </html>
