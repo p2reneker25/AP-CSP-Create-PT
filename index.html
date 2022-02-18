@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--Jquery library used for fetching apis--> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--Jquery library used for fetching apis--> 
 
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>AP CSP Performance Task</title>
-    <link rel = "icon" href = "putpathhere">
+    <link rel = "icon" type = "image/png" href = "images/favicon.png">
     <link href="style.css" rel="stylesheet" type="text/css" />
         AP CSP Performance Task
   </head>
   <body>
     <center>
     <h1> Sea Level Rise Calculator </h1>
-    <select id="locationMode" onchange="chooseLocationSystem()">
-          <option>Choose method of getting location</option>
+    <select id="locationMode" onchange="chooseLocationSystem()" enabled>
+          <option>----Choose method of getting location----</option>
           <option>Use browser location</option>
           <option>Use coordinates</option>
           <option>Use address</option>
@@ -40,7 +41,10 @@
     </div>
     <br>
     <button id="submitInfo" onclick="submitLocation()">Submit</button>
+      <br></br>
+      <p id="doom" style = "color: #ffffff;"> Your home will flood in ____ years!</p>
   </body>
     
     <script src="scripts/script.js"></script>
 </html>
+
